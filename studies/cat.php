@@ -6,8 +6,7 @@ array('name' => 'Laura', 'group' => 'A','age'=>15)
 );
 
     for($i=0; $i<count($students); $i++){
-        for($j=0; $j<count($students[$i]); $j++){
-            echo $students[$i][$j];
-        }
+        echo "The name is ". $students[$i]['name']. "in group".$students[$i]['group']. "and
+        age".$students[$i]['age']."<br>";
     }
 ?>
