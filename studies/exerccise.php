@@ -8,7 +8,7 @@
      for($i=0;$i<count($provinceDetails);$i++){
          echo "<br/>";
          for($j=0; $j< count($provinceDetails[$i]); $j++){
-            echo $provinceDetails[$i][$j];
+            echo $provinceDetails[$i][$j].",";
          }
      }
 ?>

@@ -2,7 +2,7 @@
 function addElement($scores, $index)
 {
     $scores = [99, 78, 75, 68, 88, 63, 75, 90, 78];
-    $districts = array([“Kicukiro”, “Gasabo”, “Kamonyi”, ”Muhanga”, ”Nyabihu”]);
+    $districts = array(["Kicukiro", "Gasabo", "Kamonyi", "Muhanga", "Nyabihu"]);
 
     array_push($districts, $index);
     array_push($scores, $scores);
