@@ -6,7 +6,7 @@ echo $j." ";
 for($j = $i-1; $j >= 1; $j-- ){
 echo $j." ";
 }
-echo "<br>";
+echo "\n";
 }
 
 

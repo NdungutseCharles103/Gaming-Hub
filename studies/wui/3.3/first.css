@@ -1,0 +1,46 @@
+table,th,td,tr{
+    border: 1px solid black;
+    border-collapse: collapse;
+    /* border-collapse: separate;
+    border-spacing: 20px; */
+}
+table{
+    table-layout: fixed;
+}
+th, td{
+    height: 50px;
+    word-wrap: break-word;
+    white-space: nowrap;
+    
+}
+.container{
+    overflow: scroll;
+    max-width: 80%;
+    margin: 0 auto;
+    height: 50vh;
+    background: yellow;
+}
+/* thead{
+    background-color: #ccc;
+}
+tbody{
+    background-color: beige;
+}
+tfoot{
+    background-color: aqua;
+} */
+.col1{
+    background-color: aqua;
+}
+.col2{
+    background-color: rgb(222, 226, 226);
+}
+.col3{
+    background-color: rgb(103, 145, 146);
+}
+.col4{
+    background-color: rgb(63, 153, 155);
+}
+.col5{
+    background-color: rgb(11, 46, 145);
+}
