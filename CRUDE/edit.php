@@ -7,6 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit user</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        
+        input[type="submit"], #submit{
+    background: blue;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    width: 150px;
+    cursor: pointer;
+    height: 35px;
+    padding: 3px 6px;
+    margin-top: 10px;
+}
+    </style>
 </head>
 <body>
     <?php
@@ -19,28 +33,31 @@
     
     if (!$connection) {
         echo 'connection error' . mysqli_connect_error();
-    }else{
+    }
+    else{
         $id=$_GET['thisID'];
-        $sql = "SELECT user_id, username,lastName,firstName,Nationality,gender, email,telephone FROM mis_users where user_id=$id";
+        $sql = "SELECT*FROM mis_users where user_id=$id";
     $select = mysqli_query($connection, $sql) or die("Error occurred" . mysqli_error($connection));
+    // $result = $connection->query($sql);
     
     if($select){
-        while($row=mysqli_fetch_array($query)){
-        }
-    }
-}
+        while($row = mysqli_fetch_assoc($select)){
+        
+    
+
 ?> 
     <div class="main">
-        <form action="signup.php" method="POST">
-            <h2>Create account</h2>
+        <form action="update.php" method="POST">
+            <h2>update account</h2>
             <div class="inputs">
                 <div class="inlab">
+                <input type="hidden" name="user_id" value=<?php echo $row["user_id"]; ?>>
                     <label for="firstname">Firstname</label>
-                    <input type="text" placeholder="Enter First Name" name="firstname">
+                    <input type="text" placeholder="Enter First Name" name="firstname"  value=<?php echo $row['firstName']; ?>>
                 </div>
                 <div class="inlab">
                     <label for="lastname">Lastname</label>
-                    <input type="hidden" name="user_id" value=<?php echo $row['user_id']; ?>>
+                    <input type="text" name="lastname" value=<?php echo $row['lastName']; ?>>
                 </div>
                 <div class="inlab">
                     <label for="Email">Email</label>
@@ -52,23 +69,23 @@
                 </div>
                 <div class="inlab">
                     <label for="sex">Gender</label>
-                    <?php if($row["gender"]=="Male"){?>
+                    <?php if($row['gender']=='Male'){?>
                     <div class="rad">
-                        <input type="radio" id="sex" name="gender" value="Male"><label for="Male" checked>Male</label>
+                        <input type="radio" id="sex" name="gender" value="Male" checked><label for="Male">Male</label>
                         <input type="radio" id="sex1" name="gender" value="Female"><label for="Female">Female</label>
                     </div>
                     <?php } else{?>
                         <div class="rad">
                         <input type="radio" id="sex" name="gender" value="Male"><label for="Male">Male</label>
-                        <input type="radio" id="sex1" name="gender" value="Female"><label for="Female" checked>Female</label>
+                        <input type="radio" id="sex1" name="gender" value="Female" checked><label for="Female">Female</label>
                     </div>
                     <?php }?>
                 </div>
                 <div class="inlab">
                     <label for="nationality"> Nationality</label>
                    <Select name="Nationality" id="nationality">
+                       <option value="Rwanda"> <?php echo $row["nationality"];?></option>
                        <option value=""> --Select--</option>
-                       <option value="Rwanda"> <?php echo $row["Nationality"];?></option>
                        <option value="Uganda">Uganda</option>
                        <option value="Kenya"> Kenya</option>
                    </Select>
@@ -86,12 +103,17 @@
                     <input type="password" placeholder="Comfirn your Password" name="cpassword">
                 </div>
                 <div>
-                    <input type="submit" value="Register"></input>
+                    <input id="submit" type="submit" value="Update">
                 </div>
             </div>
-            <a href="./display.php">show an example of registered user</a>
         </form>
     </div>
 </body>
 
 </html>
+
+<?php
+        }
+    } 
+}
+?>

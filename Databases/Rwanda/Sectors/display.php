@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <title>sectors</title>
+  <link rel="stylesheet" href="../../../CRUDE/style.css">
   <style>
     body{
     background-color: aliceblue;
@@ -71,43 +71,31 @@ input[type="submit"]{
   $DB_host = "localhost";
   $DB_user = "root";
   $DB_password = "chazard10.3";
-  $DB_name = "db_mis";
+  $DB_name = "rwanda";
   $connection = mysqli_connect($DB_host, $DB_user, $DB_password, $DB_name);
 
   if (!$connection) {
     echo 'connection error' . mysqli_connect_error();
   } else {
-    $sql = "SELECT user_id, username,lastName,firstName,Nationality,gender, email,telephone FROM mis_users";
+    $sql = "SELECT * FROM sectors";
     $select = mysqli_query($connection, $sql) or die("Error occurred" . mysqli_error($connection));
     $result = $connection->query($sql);
 
     if ($result->num_rows > 0) {
-      echo '<h1>The registered users so far:</h1>';
+      echo '<h1>All sectors in Rwanda:</h1>';
       echo "<table class='d'>
       <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Username</th>
-      <th>email</th>
-      <th>Nationality</th>
-      <th>Gender</th>
-      <th>telephone</th>
-      <th>update</th>
-      <th>Delete</th>
+      <th>sectorId</th>
+      <th>sectorName</th>
+      <th>districtId</th>
       </tr>";
       // output data of each row
       while ($row = $result->fetch_assoc()) {
         // $edit = '<a href="edit.php">edit user</a>';
         echo "<tr>
-            <td>" . $row["user_id"] . "</td>
-             <td>" . $row["firstName"] . " " . $row["lastName"] . "</td>
-             <td>" . $row["username"] . "</td>
-             <td>" . $row["email"] . "</td>
-             <td>" . $row["Nationality"] . "</td>
-             <td>" . $row["gender"] ."</td>
-             <td>" . $row["telephone"] . "</td>
-             <td><a class='linkup' href='edit.php?thisID=".$row['user_id']."'>Update</a></td>
-             <td><a class='linkup' href='delete.php?thisID=".$row['user_id']."'>Delete</a></td>
+            <td>" . $row["sectorId"] . "</td>
+             <td>" . $row["sectorName"] . "</td>
+             <td>" . $row["districtId"] . "</td>
              </tr>";
       }
       echo "</table>";
@@ -117,8 +105,8 @@ input[type="submit"]{
     $connection->close();
   }
   ?>
-  <a href="index.html">Add user</a>
-  <a href="delall.php">Delete all users</a>
+    <a href="../welcome.html">Go to Home Page</a>
+
 </body>
 
 </html>

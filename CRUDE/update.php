@@ -1,18 +1,9 @@
-<html>
-<head>
-    <style>
-        a{
-            text-decoration: none;
-            margin-left: 20px;
-            padding: 5px 8px;
-            background-color: #00f;
-            color: #fff;
-        }
-    </style>
-</head>
+
 
 <?php
 
+// include 'edit.php';
+$userid=$_POST["user_id"];
 $firstName=$_POST["firstname"];
 $lastName=$_POST["lastname"];
 $telephone=$_POST["tel"];
@@ -21,13 +12,10 @@ $nationality=$_POST["Nationality"];
 $username=$_POST["username"];
 $email = $_POST["email"];
 $password=$_POST["password"];
-$cpassword=$_POST["cpassword"];
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 if (($firstName=="") ||($lastName=="") || ($email=="")){
     echo 'Please provide all information';
-}elseif($password!="$cpassword"){
-    echo 'Passwords do not match!!';
 }
 else{
     define('HOST', "localhost");
@@ -38,9 +26,16 @@ else{
     $connection= mysqli_connect(HOST,$DB_user,$DB_password,$DB_name);
     if (!$connection) {
        echo 'connection error'.mysqli_connect_error();
-    }else{
-        $insertQuery="INSERT INTO mis_users(firstName, lastName, gender, telephone,email,nationality, username,password) values
-        ('$firstName','$lastName','$gender','$telephone','$email','$nationality','$username','$hashed_password')";
+    }elseif (($firstName=="") ||($lastName=="") || ($email=="")||($password=="")){
+        echo 'Please provide all information';
+    }
+    elseif($password!="$cpassword"){
+        echo 'Passwords do not match!!';
+    }
+    else{
+        $insertQuery="UPDATE mis_users SET firstName='$firstName', lastName='$lastName',
+        telephone='$telephone', gender='$gender', nationality='$nationality', username='$username', email='$email',
+        password='$password' WHERE user_id=$userid";
 
         $insert = mysqli_query($connection,$insertQuery) or die("Error occurred".mysqli_error($connection));
         if ($insert) {  
@@ -52,5 +47,3 @@ else{
     }
 }
 ?>
-<a href="./display.php" class="dlink">Display The Users</a>
-</html>

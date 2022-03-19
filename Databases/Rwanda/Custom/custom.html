@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom sql</title>
+  <link rel="stylesheet" href="../../../CRUDE/style.css">
+  <style>
+    .linkup{
+      width: 100%;
+    text-decoration: none;
+    color: #00f;
+}
+.linkup:hover{
+  text-decoration: underline;
+}
+a{
+  text-decoration: none;
+  display: block;
+  color: #00f;
+  margin-top: 10px;
+}
+input{
+  outline: none;
+  padding: 5px;
+  margin: 0 10px;
+  font-size: 1.1em;
+}
+.seacr{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.seacr form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+input[type="submit"]{
+  margin: 0 10px!important;
+}
+p{
+  margin-top: 30px;
+}
+form, input{
+  width: 100%;
+}
+  </style>
+</head>
+
+<body>
+  <h1>Other desired tables</h1>
+  <p>here you can find more information by using your own sql queries to display tables by using inner join and other syntax functions
+    (sql)
+  </p>
+  <p> <strong>Hint:</strong> SELECT p.provinceName as one, d.districtName as two  FROM provinces p inner join districts d ON p.provinceId = d.provinceId</p>
+  <p><strong>Notice:</strong>1. that table headers are not real header you selected. so you must recognize the order of your columns as stated in the query.<br>
+    2.There is a maximum of 5 columns.So, some columns will be empty or other not be diplayed according to the columns you requested from the query
+    (if less or greater than 5
+  </p>
+  <p>select columns as one, two, three, four, five. respectively in order to display the tables as shown in the hint above</p>
+  <div class="seacr">
+    <h3>Custom Query</h3>
+    <form action="custom.php" method="GET">
+      <input type="text" placeholder="Enter your desired sql query here" name="query">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+
+</html>

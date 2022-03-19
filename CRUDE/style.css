@@ -52,7 +52,7 @@ form{
     border-radius: 8px;
     margin-left: 10px;
 }
-input[typ="submit"]{
+input[type="submit"], #submit{
     background: blue;
     border: none;
     color: white;
@@ -81,3 +81,44 @@ input[typ="submit"]{
 #sex1{
     margin-left: 20px;
 }
+.dlink{
+    padding: 4px 8px;
+    background-color: rgb(4, 49, 194);
+}
+table{
+    border-spacing: 0px;
+    width: 100%;
+}
+
+.table td, .table th{
+    padding: .75em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.table td > a.btn{
+    padding: .3em 1em;
+    font-size: 1.1em;
+    margin: 0 .2em;
+}
+
+.table tr:hover{
+    background-color:#06d6a0 ;
+}
+
+.table tr:hover td > a{
+    box-shadow: none;
+}
+
+.table .thead-dark th{
+    color: #fff;
+    background-color: var(--dark) ;
+    border-color: #32383e;
+}
+h1{
+    width: 100%;
+    text-align: center;
+}
+
+
