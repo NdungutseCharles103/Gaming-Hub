@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans&family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main{
+    background-color: rgb(199, 199, 238);
+    height: 100vh;
+}
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 3% 5%;
+    width: 35%;
+}
+h3{
+    margin-bottom: 50px;
+    font-size: 2em;
+}
+.labels{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+input{
+    width: 100%;
+    margin-top: 10px;
+    padding: 0 10px;
+    outline: none;
+    height: 45px;
+}
+#sub{
+    cursor: pointer;
+    border: none;
+    height: 50px;
+    margin-top: 40px;
+    color: #fff;
+    padding: 4px 7px;
+    background-color: rgb(32, 32, 133);
+}
+button{
+    display: flex;
+    width: 100%;
+    height: 35px;
+    padding: 20px ;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid rgb(199, 193, 193);
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+button img{
+    width: 10%;
+    margin-right: 10px;
+}
+.alt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    margin-top: 40px;
+}
+.alt a{
+    margin-left: 10px;
+    text-decoration: none;
+    color: rgb(32, 32, 133);
+}

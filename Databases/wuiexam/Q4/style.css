@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans&family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+.container{
+    background-color: rgb(219, 226, 248);
+    padding-top: 100px;
+    /* height: 100vh; */
+    width: 100%;
+}
+.main{
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+}
+.head{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 100px;
+}
+select{
+    background-color: rgb(3, 3, 80);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 10px;
+}
+table{
+    background-color: #fff;
+}
+th{
+    height: 100px;
+    width: 10%;
+    border-bottom: 1px solid #000;
+}
+td{
+    height: 80px;
+    border-bottom: 1px solid rgb(170, 168, 168);
+    width: 10%;
+    align-items: center;
+    
+}
+.check{
+    width: 100%;
+    margin: 0 auto;
+}
+td button{
+    width: 100%;
+    padding: 4px 7px;
+}
+.actions {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.actions i{
+    margin-left: 10px;
+}
+img{
+    width: 30px;
+    border-radius: 50%;
+}
+.img{
+    display: flex;
+    align-items: center;
+}
+td button{
+    background-color: rgb(226, 67, 67);
+    border: none;
+}
+.bx-edit-alt {
+    color: rgb(40, 106, 206);
+}
+.bx-trash{
+    color: red;
+}

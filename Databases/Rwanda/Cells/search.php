@@ -86,57 +86,57 @@ input{
     if (!$connection) {
         echo 'connection error' . mysqli_connect_error();
     } elseif($id !="") {
-        $sql = "SELECT * FROM districts where districtId like '%$id%'";
+        $sql = "SELECT * FROM cells where cellId like '%$id%'";
         $select = mysqli_query($connection, $sql) or die("Error occurred" . mysqli_error($connection));
         // $result = $connection->query($sql);
         if (mysqli_num_rows($select) > 0) {
             echo '<h1>The result are:</h1>';
             echo "<table class='d'>
             <tr>
-                <th>districtId</th>
-                <th>districtName</th>
-                <th>provinceId</th>
+                <th>cellId</th>
+                <th>cellName</th>
+                <th>sectorId</th>
             </tr>";
             // output data of each row
             while ($row = mysqli_fetch_array($select)) {
                 // $edit = '<a href="edit.php">edit user</a>';
                 echo "<tr>
-                <td>" . $row["districtId"] . "</td>
-                <td>" . $row["villageName"] . "</td>
-                <td>" . $row["provinceId"] . "</td>
+                <td>" . $row["cellId"] . "</td>
+                <td>" . $row["cellName"] . "</td>
+                <td>" . $row["sectorId"] . "</td>
                    </tr>";
             }
             echo "</table>";
         } else {
-            echo "No village has an id of " . $id . "";
+            echo "No cell has an id of " . $id . "";
             echo "<a href='display.php'>Go back</a>";
         }
         $connection->close();
     }elseif($name != '') {
-        $sql = "SELECT * FROM districts where districtName like '%$name%'";
+        $sql = "SELECT * FROM cells where cellName like '%$name%'";
         $select = mysqli_query($connection, $sql) or die("Error occurred" . mysqli_error($connection));
         $result = $connection->query($sql);
         if ($result->num_rows > 0) {
             echo '<h1>The result are:</h1>';
             echo "<table class='d'>
             <tr>
-                <th>districtId</th>
-                <th>districtName</th>
-                <th>districtId</th>
+                <th>cellId</th>
+                <th>cellName</th>
+                <th>cellId</th>
             </tr>";
             // output data of each row
             while ($row = $result->fetch_assoc()) {
                 // $edit = '<a href="edit.php">edit user</a>';
                 echo "<tr>
-                <td>" . $row["districtId"] . "</td>
-                <td>" . $row["districtName"] . "</td>
-                <td>" . $row["districtId"] . "</td>
+                <td>" . $row["cellId"] . "</td>
+                <td>" . $row["cellName"] . "</td>
+                <td>" . $row["cellId"] . "</td>
                    </tr>";
             }
             echo "</table>";
-            echo "<a href='display.php'>Display all districts</a>";
+            echo "<a href='display.php'>Display all cells</a>";
         } else {
-            echo "No district has a name of " . $name . "";
+            echo "No cell has a name of " . $name . "";
             echo "<a href='display.php'>Go back</a>";
         }
         $connection->close();
