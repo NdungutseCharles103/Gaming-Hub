@@ -9,7 +9,7 @@ function addElement($scores, $index)
     
     print_r($scores) ;
     print_r($districts) ;
-    
+
 }
 addElement(78, "Kicukiro");
 ?>
