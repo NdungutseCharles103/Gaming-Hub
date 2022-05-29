@@ -1,3 +1,3 @@
 <?php
-$name= RCA;
+$name= "RCA";
 echo "I study at $name";
