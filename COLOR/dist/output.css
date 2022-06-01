@@ -1581,6 +1581,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
+.bg-\[black\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#000000\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#060239\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(6 2 57 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#05031c\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(5 3 28 / var(--tw-bg-opacity));
+}
+
+.bg-\[hsl\(245\2c 81\%\2c 6\%\)\] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(245 81% 6% / var(--tw-bg-opacity));
+}
+
+.bg-\[\#1313\] {
+  background-color: #1313;
+}
+
+.bg-\[\#131313\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(19 19 19 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\.\.\.\'\)\] {
   background-image: url('...');
 }

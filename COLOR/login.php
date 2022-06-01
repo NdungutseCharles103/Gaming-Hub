@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="w-100 vh-100 bg-black flex-column align-items-center justify-content-center">
+    <div class="w-100 vh-100 bg-[#131313] flex-column align-items-center justify-content-center">
         <form action="newuser.php" class=" d-flex flex-column mx-auto w-50 text-white ">
             <div class="row mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
