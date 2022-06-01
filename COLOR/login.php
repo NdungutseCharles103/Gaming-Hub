@@ -11,22 +11,22 @@
 </head>
 
 <body>
-    <div class="w-100 vh-100 bg-[#131313] flex-column align-items-center justify-content-center">
-        <form action="newuser.php" class=" d-flex flex-column mx-auto w-50 text-white ">
-            <div class="row mb-3">
+    <div class="w-100 flex h-screen bg-[#131313] items-center justify-center">
+        <form action="newuser.php" class="flex flex-col  mx-auto w-50 text-white ">
+            <div class="flex flex-col mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
                 <div class="col-sm-10">
                     <input type="text" name="username" class="form-control" id="inputEmail3">
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="flex flex-col mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Password</label>
                 <div class="col-sm-10">
                     <input type="password" name="password" class="form-control" id="inputEmail3">
                 </div>
             </div>
-            <div class="row mb-3">
-                <button type="submit" name="submit" class="btn bg-blue-600 w-25 mx-auto min-w-10">Sign in</button>
+            <div class="flex flex-col mb-3">
+                <button type="submit" name="submit" class="btn bg-blue-600 w-25 text-white min-w-10">Sign in</button>
             </div>
         </form>
     </div>
