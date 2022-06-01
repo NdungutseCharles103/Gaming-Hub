@@ -3,7 +3,7 @@
     if(isset($_POST['submit'])){
         $username = $_POST['username'];
         $password = $_POST['password'];
-        $hashed = md5($password);
+        $hashed = hash('SHA512', $password);
 
         $sql = "SELECT username, email FROM users WHERE username = '$username' AND password = '$hashed'";
         $result = mysqli_query($conn, $sql);

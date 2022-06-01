@@ -11,7 +11,7 @@
 
 <body>
     <div class="w-100 vh-100 bg-dark flex-column align-items-center justify-content-center">
-        <form action="newuser.php" class=" d-flex flex-column mx-auto w-50 text-white ">
+        <form action="newuser.php" method="POST" class=" d-flex flex-column mx-auto w-50 text-white ">
             <div class="row mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="row mb-3">
-                <button type="submit" name="submit" class="btn btn-primary w-25 mx-auto min-w-10">Sign in</button>
+                <button type="submit" name="submit" class="btn btn-primary w-25 mx-auto min-w-10">Sign Up</button>
             </div>
         </form>
     </div>
