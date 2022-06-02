@@ -19,7 +19,7 @@
     $villageId = trim($village[0]);
     $cellId = trim($village[1]);
     $villageName = trim($village[2]);   
-
+                             
     $query =mysqli_query($connect,"INSERT INTO villages(villageId, cellId, villageName) 
     VALUES ('$villageId', '$cellId', '$villageName')") or die(mysqli_error($connect));
 
@@ -29,4 +29,3 @@
     }
     fclose($villages);
 }
-?>

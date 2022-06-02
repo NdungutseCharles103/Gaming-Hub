@@ -11,7 +11,6 @@
     } else {
         
     $books = fopen("books.xlsx", "r") or die("unable to open file");
-    
 
     while (!feof($books)) {
     $line = fgets($books);

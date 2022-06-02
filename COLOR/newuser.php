@@ -6,15 +6,19 @@ $DB_Name = 'color';
 $DB_user = 'root';
 $DB_password = '';
 
+echo "submitting";
 
-$connection = mysqli_connect(HOST, $DB_user, $DB_password, $DB_Name);
-if (!$connection) {
-    echo "Error: Unable to connect to MySQL." . PHP_EOL;
-} else {
-    if (isset($_POST['submit'])) {
+if (isset($_POST['submit']) && isset($_FILES['file'])) {
+    echo "submitting";
+    $connection = mysqli_connect(HOST, $DB_user, $DB_password, $DB_Name);
+    if (!$connection) {
+        echo "Error: Unable to connect to MySQL." . PHP_EOL;
+    } else {
         $email = $_POST['email'];
         $username = trim($_POST['username']);
         $password = $_POST['password'];
+        echo "The form was submitted";
+        print_r($_FILES['file']);
 
         $temporary_filename = $_FILES['file']['tmp_name'];
         $final_filename =  $_FILES['file']['name'];

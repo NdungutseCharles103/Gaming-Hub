@@ -18,7 +18,7 @@
         $villageId = $village["villageId"] ; 
         $cellId = $village["cellId"]; 
         $villageName = $village["villageName"];
-        fwrite($villages, $villageId . "," . $cellId.",".$villageName."\n");
+fwrite($villages, $villageId . "," . $cellId.",".$villageName."\n");
     }
     fclose($villages);
 }
