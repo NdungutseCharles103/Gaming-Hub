@@ -29,7 +29,7 @@ if (isset($_POST['submit']) && isset($_FILES['picture'])) {
             $em = "Sorry, your file is too large.";
             header("Location: index.php?error=$em");
         } else {
-            $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
+            $img_ex = pathinfo ($img_name, PATHINFO_EXTENSION);
             $img_ex_lc = strtolower($img_ex);
 
             $allowed_exs = array("jpg", "jpeg", "png");
