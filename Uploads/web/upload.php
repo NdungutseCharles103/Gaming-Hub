@@ -3,10 +3,10 @@
 if (isset($_POST['submit']) && isset($_FILES['picture'])) {
 
     $sname = "localhost";
-    $uname = "root";
+    $uname = "ndungutsecharles103@gmail.com";
     $password = "chazard10.3";
 
-    $db_name = "db_mis";
+    $db_name = "users";
 
     $conn = mysqli_connect($sname, $uname, $password, $db_name);
 
@@ -39,10 +39,9 @@ if (isset($_POST['submit']) && isset($_FILES['picture'])) {
                 $img_upload_path = 'uploads/' . $new_img_name;
                 move_uploaded_file($tmp_name, $img_upload_path);
 
-                // Insert into Database
                 $sql = "INSERT INTO images(image_url) 
 				        VALUES('$new_img_name')";
-                mysqli_query($connection, $sql);
+                mysqli_query($conn, $sql);
                 header("Location: view.php");
             } else {
                 $em = "You can't upload files of this type";

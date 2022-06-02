@@ -31,6 +31,12 @@
                 </div>
             </div>
             <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Upload Image</label>
+                <div class="col-sm-10">
+                    <input type="file" name="file" class="form-control" accept="image/jpg,image/png, image/jpeg" id="inputEmail3">
+                </div>
+            </div>
+            <div class="row mb-3">
                 <button type="submit" name="submit" class="btn btn-primary w-25 mx-auto min-w-10">Sign Up</button>
             </div>
         </form>

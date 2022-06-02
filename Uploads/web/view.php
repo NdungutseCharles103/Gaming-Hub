@@ -1,9 +1,9 @@
 <?php
     define('HOST', "localhost");
     $DB_host = "localhost";
-    $DB_user = "root";
+    $DB_user = "ndungutsecharles103@gmail.com";
     $DB_password = "chazard10.3";
-    $DB_name = "db_mis";
+    $DB_name = "users";
     $connection = mysqli_connect($DB_host, $DB_user, $DB_password, $DB_name);
 
  ?>
@@ -43,7 +43,7 @@
     <a href="./web/index.php">&#8592;</a>
     <?php
     $sql = "SELECT * FROM images";
-    $res = mysqli_query($conn,  $sql);
+    $res = mysqli_query($connection,  $sql);
 
     if (mysqli_num_rows($res) > 0) {
         while ($images = mysqli_fetch_assoc($res)) {  ?>
