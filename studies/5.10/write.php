@@ -3,4 +3,7 @@
     $district = "\n101, 01, kicukiro";
     fwrite($districts, $district);
     fclose($districts);
+
+    $ds = disk_total_space("/");
+    echo $ds;
 ?>
