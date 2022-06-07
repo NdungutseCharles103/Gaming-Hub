@@ -16,4 +16,3 @@ for($i=0; $i<count($scores); $i++) {
         echo "The scores at index i=$i and j=$j is ".$scores[$i][$j]."<br>";
     }
 }
-?>
