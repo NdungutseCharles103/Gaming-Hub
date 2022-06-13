@@ -1,6 +1,6 @@
 <?php
 
-    $mysql = new mysqli("localhost", "root", "chazard10.3", "rwanda");
+    $mysql = new mysqli("localhost", "carimount", "chazard10.3", "rwanda");
     $mysql->set_charset("utf8");
 
     $query = $mysql->query("SELECT * from villages LIMIT 3") or die($mysql->error);
