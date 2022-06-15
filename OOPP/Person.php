@@ -22,7 +22,6 @@ class Person{
         $age = date_diff(date_create($this->dob), date_create('now'))->y;
         return "ID=".$this->id." Firstname=".$this->firstname." Lastname=".$this->lastname." DOB=".$this->dob." Age=".$age;
     }
-    
 };
 
 $person = new Person(1,"Hirwa","Vanessa","2005-03-7");
